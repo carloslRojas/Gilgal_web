@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia Gilgal | Crecemos Contigo</title>
+    <meta name="description" content="Bienvenido a la Iglesia Evangélica Gilgal en Maracay. Crecemos contigo. Consulta nuestros horarios y acompáñanos.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#6c4ab6', // violet requested
+                            hover: '#5b3e9b',   // darker violet
+                        },
+                        secondary: '#0f172a', // slate-900
+                        light: '#f8fafc',    // slate-50
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+    <!-- ============================================== -->
+    <!-- START HEADER COMPONENT -->
+    <!-- ============================================== -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-50 transition-all duration-300 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 font-heading font-black text-2xl text-secondary uppercase tracking-tight">
+                    <img src="assets/images/logo.jpg" alt="Logo Gilgal" class="w-10 h-10 rounded-full border-2 border-primary shadow-sm object-cover"> GILGAL
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="font-medium text-primary border-b-2 border-primary pb-1">Inicio</a></li>
+                    <li><a href="index.html#nosotros" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Nosotros</a></li>
+                    <li><a href="index.html#ministerios" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Ministerios</a></li>
+                    <li><a href="visita.html" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Planear Visita</a></li>
+                    <li><a href="index.html#mensajes" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Mensajes</a></li>
+                    <li><a href="#donaciones" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">Donaciones</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-secondary text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <ul class="flex flex-col px-6 py-6 space-y-5">
+                <li><a href="index.html" class="block font-medium text-primary text-lg">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="block font-medium text-slate-600 text-lg">Nosotros</a></li>
+                <li><a href="index.html#ministerios" class="block font-medium text-slate-600 text-lg">Ministerios</a></li>
+                <li><a href="visita.html" class="block font-medium text-slate-600 text-lg">Planear Visita</a></li>
+                <li><a href="index.html#mensajes" class="block font-medium text-slate-600 text-lg">Mensajes</a></li>
+                <li><a href="#donaciones" class="block bg-primary hover:bg-primary-hover text-white text-center px-6 py-3.5 rounded-lg font-bold mt-4 transition-colors">Donaciones</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ============================================== -->
+    <!-- END HEADER COMPONENT -->
+    <!-- ============================================== -->
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero.png" alt="Adoración Gilgal" class="w-full h-full object-cover scale-105 animate-[pulse_20s_ease-in-out_infinite]" onerror="this.src='https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?q=80&w=1920&auto=format&fit=crop'">
+            <!-- Overlay with gradient -->
+            <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/70 to-secondary/40"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-left px-4 max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1.5 px-4 rounded-full bg-primary/20 text-primary font-bold text-sm mb-6 uppercase tracking-widest border border-primary/30">Crecemos Contigo</span>
+                <h1 class="font-heading font-black text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-[1.1] tracking-tight">
+                    Bienvenido a <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-300">Iglesia Gilgal</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-slate-200 mb-8 max-w-2xl font-light">Una iglesia en distintos lugares. Acompáñanos en nuestros cultos dominicales a las <span class="font-bold text-white">10:00 AM</span> y <span class="font-bold text-white">12:00 PM</span>.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="visita.html" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(108,74,182,0.4)] hover:shadow-[0_0_30px_rgba(108,74,182,0.6)] hover:-translate-y-1 text-center flex items-center justify-center gap-2">
+                        Planea tu visita <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Social Proof / Badge -->
+            <div class="md:w-1/3 hidden md:flex justify-end">
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 text-white text-center max-w-xs transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <div class="text-4xl text-primary mb-3"><i class="fa-brands fa-instagram"></i></div>
+                    <h3 class="font-bold text-xl mb-1">Únete a la familia</h3>
+                    <p class="text-sm text-slate-300 mb-4">Sigue lo que Dios está haciendo en nuestra comunidad día a día.</p>
+                    <a href="https://instagram.com/iglesiagilgal" target="_blank" class="block w-full bg-white text-secondary hover:bg-primary hover:text-white font-semibold py-2 rounded-lg transition-colors">@iglesiagilgal</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Resumen: Nosotros -->
+    <section id="nosotros" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-heading font-black text-4xl md:text-5xl text-secondary mb-6 tracking-tight">Acerca de Nosotros</h2>
+                    <div class="w-24 h-1.5 bg-primary mb-8 rounded-full"></div>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">Somos una familia apasionada por ver a nuestra ciudad transformada por el poder del evangelio. En Gilgal, creemos firmemente en el lema <strong>"Crecemos Contigo"</strong>, porque tu crecimiento espiritual es nuestra prioridad.</p>
+                    <p class="text-lg text-slate-600 mb-8 leading-relaxed">Sin importar tu trasfondo o historia, hay un lugar para ti en nuestra casa. Ven a experimentar tiempos de adoración genuina y mensajes que impactarán tu vida diaria.</p>
+                    <a href="#" class="inline-flex items-center gap-2 text-secondary font-bold text-lg border-b-2 border-primary pb-1 hover:text-primary transition-colors group">
+                        Nuestra historia <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="relative">
+                    <!-- Decoración abstracta -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl"></div>
+                    
+                    <img src="assets/images/pastors.png" alt="Pastores" class="rounded-3xl shadow-2xl object-cover w-full h-[500px] relative z-10" onerror="this.src='https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEED DE INSTAGRAM SIMULADO -->
+    <section class="py-24 bg-light overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h2 class="font-heading font-black text-4xl text-secondary mb-4 tracking-tight">Lo último en nuestra iglesia</h2>
+                    <p class="text-lg text-slate-600">Síguenos en Instagram para mantenerte al día con devocionales, eventos y resúmenes de nuestros cultos dominicales.</p>
+                </div>
+                <a href="https://instagram.com/iglesiagilgal" target="_blank" class="hidden md:inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-shadow mt-6 md:mt-0">
+                    <i class="fa-brands fa-instagram text-xl"></i> @iglesiagilgal
+                </a>
+            </div>
+
+            <!-- Instagram Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Post 1 -->
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-slate-200 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1438283173091-5dbf5c5a3206?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6 text-white font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart"></i> 452</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-comment"></i> 28</span>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-slate-200 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1510915361894-faa8b2d72111?q=80&w=500&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6 text-white font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart"></i> 389</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-comment"></i> 15</span>
+                    </div>
+                </div>
+                <!-- Post 3 (Video reel simulation) -->
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-slate-200 cursor-pointer">
+                    <img src="assets/images/worship.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=500&auto=format&fit=crop'">
+                    <div class="absolute top-3 right-3 text-white text-xl drop-shadow-md"><i class="fa-solid fa-video"></i></div>
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6 text-white font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-play"></i> 1.2k</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart"></i> 230</span>
+                    </div>
+                </div>
+                <!-- Post 4 -->
+                <div class="relative group aspect-square rounded-xl overflow-hidden bg-slate-200 cursor-pointer">
+                    <img src="assets/images/kids.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1544256718-3baf237f39d0?q=80&w=500&auto=format&fit=crop'">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-6 text-white font-bold">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-heart"></i> 512</span>
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-comment"></i> 41</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="https://instagram.com/iglesiagilgal" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-bold">
+                    <i class="fa-brands fa-instagram text-xl"></i> Seguir @iglesiagilgal
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Ministerios -->
+    <section id="ministerios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-heading font-black text-4xl md:text-5xl text-secondary mb-6 tracking-tight">Ministerios Gilgal</h2>
+                <div class="w-24 h-1.5 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-lg text-slate-600">Crece, conecta y sirve. Encuentra el ministerio ideal para ti y tu familia y conviértete en parte de lo que Dios está haciendo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Niños -->
+                <a href="ministerio-plantilla.html" class="group bg-light rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="assets/images/kids.png" alt="Niños" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1544256718-3baf237f39d0?q=80&w=500&auto=format&fit=crop'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-sm">
+                            <i class="fa-solid fa-child"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading font-bold text-2xl text-secondary mb-3">Gilgal Kids</h3>
+                        <p class="text-slate-600 mb-6">Formando el corazón de los más pequeños con valores bíblicos y un amor genuino por Jesús.</p>
+                        <span class="inline-flex items-center gap-2 bg-slate-200 text-secondary px-5 py-2 rounded-full font-semibold group-hover:bg-primary group-hover:text-white transition-colors">
+                            Ver detalles <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Jóvenes -->
+                <a href="ministerio-plantilla.html" class="group bg-light rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=500&auto=format&fit=crop" alt="Jóvenes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-sm">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading font-bold text-2xl text-secondary mb-3">Jóvenes</h3>
+                        <p class="text-slate-600 mb-6">Un espacio apasionante para que adolescentes y universitarios conecten y vivan su fe a otro nivel.</p>
+                        <span class="inline-flex items-center gap-2 bg-slate-200 text-secondary px-5 py-2 rounded-full font-semibold group-hover:bg-primary group-hover:text-white transition-colors">
+                            Ver detalles <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Alabanza -->
+                <a href="ministerio-plantilla.html" class="group bg-light rounded-3xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="assets/images/worship.png" alt="Alabanza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1510915361894-faa8b2d72111?q=80&w=500&auto=format&fit=crop'">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold shadow-sm">
+                            <i class="fa-solid fa-music"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading font-bold text-2xl text-secondary mb-3">Alabanza</h3>
+                        <p class="text-slate-600 mb-6">Buscando el corazón de Dios a través de la música y guiando a la iglesia a una adoración profunda.</p>
+                        <span class="inline-flex items-center gap-2 bg-slate-200 text-secondary px-5 py-2 rounded-full font-semibold group-hover:bg-primary group-hover:text-white transition-colors">
+                            Ver detalles <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- START FOOTER COMPONENT (To be repeated across pages) -->
+    <!-- ============================================== -->
+    <footer id="contacto" class="bg-secondary text-slate-400 py-16 border-t-8 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Info -->
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 font-heading font-black text-3xl text-white mb-6 uppercase tracking-tight">
+                        <img src="assets/images/logo.jpg" alt="Logo Gilgal" class="w-12 h-12 rounded-full border-2 border-primary shadow-sm object-cover"> GILGAL
+                    </a>
+                    <p class="mb-6 text-lg max-w-md">Creemos en el poder transformador de Jesús. Una iglesia apasionada, familiar y con propósito. ¡Te esperamos este domingo!</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/iglesiagilgal" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all text-xl shadow-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-blue-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-red-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enlaces -->
+                <div>
+                    <h3 class="font-heading font-bold text-white text-lg mb-6 tracking-wide">MAPA DEL SITIO</h3>
+                    <ul class="space-y-3 font-medium">
+                        <li><a href="index.html" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Inicio</a></li>
+                        <li><a href="index.html#ministerios" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Ministerios</a></li>
+                        <li><a href="visita.html" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Planear Visita</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="font-heading font-bold text-white text-lg mb-6 tracking-wide">VISÍTANOS</h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-primary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="pt-2">6CH7+JHV, Avenida Los Llanos, Maracay 2103, Aragua, Venezuela.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-primary">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <span class="pt-2">Domingos 10:00 AM y 12:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Iglesia Evangélica Gilgal. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0 font-medium">Diseñado con <i class="fa-solid fa-heart text-primary mx-1"></i> para Su Reino.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================== -->
+    <!-- END FOOTER COMPONENT -->
+    <!-- ============================================== -->
+
+</body>
+</html>
