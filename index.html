@@ -33,6 +33,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js" defer></script>
 </head>
@@ -56,7 +60,7 @@
                     <li><a href="index.html#ministerios" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Ministerios</a></li>
                     <li><a href="visita.html" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Planear Visita</a></li>
                     <li><a href="index.html#mensajes" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Mensajes</a></li>
-                    <li><a href="#donaciones" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">Donaciones</a></li>
+                    <li><a href="donaciones.html" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">Donaciones</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
@@ -74,7 +78,7 @@
                 <li><a href="index.html#ministerios" class="block font-medium text-slate-600 text-lg">Ministerios</a></li>
                 <li><a href="visita.html" class="block font-medium text-slate-600 text-lg">Planear Visita</a></li>
                 <li><a href="index.html#mensajes" class="block font-medium text-slate-600 text-lg">Mensajes</a></li>
-                <li><a href="#donaciones" class="block bg-primary hover:bg-primary-hover text-white text-center px-6 py-3.5 rounded-lg font-bold mt-4 transition-colors">Donaciones</a></li>
+                <li><a href="donaciones.html" class="block bg-primary hover:bg-primary-hover text-white text-center px-6 py-3.5 rounded-lg font-bold mt-4 transition-colors">Donaciones</a></li>
             </ul>
         </div>
     </nav>
@@ -131,12 +135,36 @@
                         Nuestra historia <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
-                <div class="relative">
+                <div class="relative w-full overflow-hidden rounded-3xl shadow-2xl">
                     <!-- Decoración abstracta -->
-                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/10 rounded-full blur-2xl z-0"></div>
                     
-                    <img src="assets/images/pastors.png" alt="Pastores" class="rounded-3xl shadow-2xl object-cover w-full h-[500px] relative z-10" onerror="this.src='https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1000&auto=format&fit=crop'">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper w-full h-[500px] relative z-10 cursor-grab active:cursor-grabbing">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/images/pastor1.jpg" alt="Pastor Obed Leonard" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/6c4ab6/ffffff?text=Falta+pastor1.jpg'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/pastor2.jpg" alt="Pastor Samuel Cárdenas" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/6c4ab6/ffffff?text=Falta+pastor2.jpg'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/pastor3.jpg" alt="Predicador Rafael Martinez" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/6c4ab6/ffffff?text=Falta+pastor3.jpg'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/pastor4.jpg" alt="Pastor Asdrubal Briceño" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/6c4ab6/ffffff?text=Falta+pastor4.jpg'">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/images/pastor5.jpg" alt="Pastor Juan Pablo Díaz" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x1000/6c4ab6/ffffff?text=Falta+pastor5.jpg'">
+                            </div>
+                        </div>
+                        <!-- Swiper Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Swiper Navigation -->
+                        <div class="swiper-button-next !text-white !w-12 !h-12 !bg-primary/50 hover:!bg-primary !rounded-full !transition-colors after:!text-xl"></div>
+                        <div class="swiper-button-prev !text-white !w-12 !h-12 !bg-primary/50 hover:!bg-primary !rounded-full !transition-colors after:!text-xl"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,8 +306,8 @@
                     <p class="mb-6 text-lg max-w-md">Creemos en el poder transformador de Jesús. Una iglesia apasionada, familiar y con propósito. ¡Te esperamos este domingo!</p>
                     <div class="flex gap-4">
                         <a href="https://instagram.com/iglesiagilgal" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all text-xl shadow-lg"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-blue-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-red-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/groups/12936738117?locale=es_LA" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-blue-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@ielgilgaloficial6133" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-red-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
 

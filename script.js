@@ -42,4 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Initialize Swiper for Pastors Slider
+    if (typeof Swiper !== 'undefined' && document.querySelector('.mySwiper')) {
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    }
 });
