@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alabanza | Iglesia Gilgal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#6c4ab6',
+                            hover: '#5b3e9b',
+                        },
+                        secondary: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+    <!-- ============================================== -->
+    <!-- START HEADER COMPONENT -->
+    <!-- ============================================== -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md z-50 transition-all duration-300 shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 font-heading font-black text-2xl text-secondary uppercase tracking-tight">
+                    <img src="assets/images/logo.jpg" alt="Logo Gilgal" class="w-10 h-10 rounded-full border-2 border-primary shadow-sm object-cover"> GILGAL
+                </a>
+                
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex space-x-8 items-center">
+                    <li><a href="index.html" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Inicio</a></li>
+                    <li><a href="index.html#nosotros" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Nosotros</a></li>
+                    <li><a href="index.html#ministerios" class="font-medium text-primary border-b-2 border-primary pb-1">Ministerios</a></li>
+                    <li><a href="visita.html" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Planear Visita</a></li>
+                    <li><a href="index.html#mensajes" class="font-medium text-slate-600 hover:text-primary transition-colors pb-1">Mensajes</a></li>
+                    <li><a href="donaciones.html" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">Donaciones</a></li>
+                </ul>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-secondary text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <ul class="flex flex-col px-6 py-6 space-y-5">
+                <li><a href="index.html" class="block font-medium text-slate-600 text-lg">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="block font-medium text-slate-600 text-lg">Nosotros</a></li>
+                <li><a href="index.html#ministerios" class="block font-medium text-slate-600 text-lg">Ministerios</a></li>
+                <li><a href="visita.html" class="block font-medium text-slate-600 text-lg">Planear Visita</a></li>
+                <li><a href="index.html#mensajes" class="block font-medium text-slate-600 text-lg">Mensajes</a></li>
+                <li><a href="donaciones.html" class="block bg-primary hover:bg-primary-hover text-white text-center px-6 py-3.5 rounded-lg font-bold mt-4 transition-colors">Donaciones</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- ============================================== -->
+    <!-- END HEADER COMPONENT -->
+    <!-- ============================================== -->
+
+    <!-- Hero del Ministerio -->
+    <header class="bg-secondary text-white py-32 relative overflow-hidden mt-20">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1510915361894-faa8b2d72111?q=80&w=1920&auto=format&fit=crop" alt="Ministerio de Alabanza" class="w-full h-full object-cover grayscale blur-[2px]">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/80 to-transparent z-0"></div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <span class="inline-block py-1.5 px-5 rounded-full bg-white/10 text-white font-bold text-sm mb-6 uppercase tracking-widest shadow-lg border border-white/20 backdrop-blur-md">Ministerio de Alabanza</span>
+            <h1 class="font-heading font-black text-5xl md:text-7xl mb-6 tracking-tight">Un Encuentro Genuino</h1>
+            <p class="text-xl text-slate-300 max-w-2xl mx-auto font-light">Guiando a nuestra iglesia a una adoración profunda, en espíritu y en verdad.</p>
+        </div>
+    </header>
+
+    <!-- Contenido del Ministerio -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                
+                <!-- Columna Principal -->
+                <div class="lg:col-span-2 space-y-12">
+                    <div>
+                        <h2 class="font-heading font-black text-3xl md:text-4xl text-secondary mb-6">Nuestra Visión</h2>
+                        <div class="w-16 h-1.5 bg-primary rounded-full mb-8"></div>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                            Nuestro propósito no es dar un concierto o un espectáculo, sino crear la atmósfera correcta para que la congregación tenga un encuentro real con la presencia de Dios a través de la música y la adoración.
+                        </p>
+                        <p class="text-lg text-slate-600 leading-relaxed">
+                            Buscamos excelencia musical, pero sobre todo, corazones rendidos y apasionados por Su gloria. Cada voz, cada instrumento y cada canción es una ofrenda a Aquel que lo merece todo.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="font-heading font-black text-3xl md:text-4xl text-secondary mb-6">Servicio y Preparación</h2>
+                        <div class="w-16 h-1.5 bg-primary rounded-full mb-8"></div>
+                        <div class="grid gap-6">
+                            <div class="bg-light p-6 rounded-2xl border border-slate-100 flex items-start gap-5 hover:shadow-md transition-shadow">
+                                <div class="bg-white w-14 h-14 rounded-xl shadow-sm flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                                    <i class="fa-solid fa-guitar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary text-xl mb-1">Ensayos Semanales</h4>
+                                    <p class="text-slate-600">Jueves a las 7:00 PM. Un tiempo no solo para perfeccionar técnica y sonido, sino para orar como equipo y prepararnos espiritualmente.</p>
+                                </div>
+                            </div>
+                            <div class="bg-light p-6 rounded-2xl border border-slate-100 flex items-start gap-5 hover:shadow-md transition-shadow">
+                                <div class="bg-white w-14 h-14 rounded-xl shadow-sm flex items-center justify-center text-primary text-2xl flex-shrink-0">
+                                    <i class="fa-solid fa-microphone-lines"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-secondary text-xl mb-1">Cultos Dominicales</h4>
+                                    <p class="text-slate-600">Ministramos en ambos servicios, a las 10:00 AM y 12:00 PM, liderando con pasión, alegría y reverencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Barra Lateral CTA -->
+                <div class="space-y-8">
+                    <div class="bg-secondary rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-primary/30 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-12 -left-12 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl"></div>
+                        <h3 class="font-heading font-black text-3xl mb-4 relative z-10">Audiciones</h3>
+                        <p class="text-slate-300 text-lg mb-8 relative z-10">¿Tocas un instrumento o cantas? Nos encantaría conocer tu talento. Déjanos tus datos para coordinar una audición.</p>
+                        
+                        <form class="space-y-5 relative z-10">
+                            <input type="text" placeholder="Tu Nombre" class="w-full px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-primary focus:bg-white/20 transition-colors">
+                            <select class="w-full px-5 py-3 rounded-xl bg-secondary border border-white/20 text-slate-300 focus:outline-none focus:border-primary focus:bg-white/10 transition-colors">
+                                <option value="">Área de interés...</option>
+                                <option value="voces">Voces (Canto)</option>
+                                <option value="musico">Músico (Instrumento)</option>
+                                <option value="multimedia">Audio / Multimedia</option>
+                            </select>
+                            <input type="tel" placeholder="Tu Teléfono (WhatsApp)" class="w-full px-5 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-primary focus:bg-white/20 transition-colors">
+                            <button class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-4 rounded-xl transition-all shadow-lg hover:-translate-y-0.5">
+                                Aplicar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- START FOOTER COMPONENT -->
+    <!-- ============================================== -->
+    <footer id="contacto" class="bg-secondary text-slate-400 py-16 border-t-8 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Info -->
+                <div class="lg:col-span-2">
+                    <a href="index.html" class="flex items-center gap-3 font-heading font-black text-3xl text-white mb-6 uppercase tracking-tight">
+                        <img src="assets/images/logo.jpg" alt="Logo Gilgal" class="w-12 h-12 rounded-full border-2 border-primary shadow-sm object-cover"> GILGAL
+                    </a>
+                    <p class="mb-6 text-lg max-w-md">Creemos en el poder transformador de Jesús. Una iglesia apasionada, familiar y con propósito. ¡Te esperamos este domingo!</p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com/iglesiagilgal" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 transition-all text-xl shadow-lg"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/groups/12936738117?locale=es_LA" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-blue-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@ielgilgaloficial6133" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-red-600 transition-colors text-xl shadow-lg"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enlaces -->
+                <div>
+                    <h3 class="font-heading font-bold text-white text-lg mb-6 tracking-wide">MAPA DEL SITIO</h3>
+                    <ul class="space-y-3 font-medium">
+                        <li><a href="index.html" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Inicio</a></li>
+                        <li><a href="index.html#ministerios" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Ministerios</a></li>
+                        <li><a href="visita.html" class="hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-angle-right text-primary text-xs"></i> Planear Visita</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h3 class="font-heading font-bold text-white text-lg mb-6 tracking-wide">VISÍTANOS</h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-primary">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="pt-2">6CH7+JHV, Avenida Los Llanos, Maracay 2103, Aragua, Venezuela.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center flex-shrink-0 text-primary">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <span class="pt-2">Domingos 10:00 AM y 12:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Iglesia Evangélica Gilgal. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0 font-medium">Diseñado con <i class="fa-solid fa-heart text-primary mx-1"></i> para Su Reino.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================== -->
+    <!-- END FOOTER COMPONENT -->
+    <!-- ============================================== -->
+
+</body>
+</html>
